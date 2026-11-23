@@ -1,0 +1,68 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "out_dir": "cards",
+  "title": {
+    "main": "极光季 · 冰岛 × 挪威",
+    "sub": "12 日 9 晚 · 9 晚极光带住宿",
+    "y": 700,
+    "main_size": 80,
+    "sub_size": 30,
+    "tracking": 4,
+    "sub_y": 830,
+    "rule_y": 900
+  },
+  "captions": [
+    { "cn": "雷克雅未克 · 哈尔格林姆教堂", "en": "HALLGRIMSKIRKJA · REYKJAVIK" },
+    { "cn": "盖锡尔地热区 · 间歇泉", "en": "GEYSIR GEOTHERMAL AREA" },
+    { "cn": "黄金瀑布", "en": "GULLFOSS" },
+    { "cn": "钻石沙滩", "en": "DIAMOND BEACH" },
+    { "cn": "杰古沙龙冰河湖", "en": "JOKULSARLON GLACIER LAGOON" },
+    { "cn": "特罗姆瑟 · 北极大教堂", "en": "ARCTIC CATHEDRAL · TROMSO" },
+    { "cn": "FJELLHEISEN 缆车", "en": "CABLE CAR · TROMSO" },
+    { "cn": "罗弗敦群岛", "en": "LOFOTEN ISLANDS" },
+    { "cn": "罗弗敦 · 渔村", "en": "FISHING VILLAGE · LOFOTEN" },
+    { "cn": "亨宁斯韦尔 · 海上球场", "en": "HENNINGSVAER STADIUM" },
+    { "cn": "帝王蟹", "en": "KING CRAB" }
+  ],
+  "caption_xy": [60, 1396],
+  "cap_size": 42,
+  "cap_en_size": 21,
+  "endcard": {
+    "title": "极光季 · 冰岛 × 挪威",
+    "lines": [
+      "北挪威 + 冰岛 12 日 9 晚",
+      "9 晚极光带 · 蓝冰洞 · 蓝湖温泉 · 帝王蟹"
+    ],
+    "price": "54,900 元 / 人起",
+    "meta": "1/28 ￥56,800　｜　2/18 · 3/4 ￥54,900",
+    "footer": "ICELAND  ×  NORWAY  ·  2027",
+    "layout": {
+      "frame_margin": 80,
+      "title_y": 700,
+      "title_size": 58,
+      "rule_y": 800,
+      "rule_half": 54,
+      "line_y0": 862,
+      "line_gap": 58,
+      "line_size": 28,
+      "price_y": 1080,
+      "price_size": 64,
+      "meta_y": 1186,
+      "meta_size": 24,
+      "footer_y": 1320,
+      "footer_size": 22
+    }
+  },
+  "cover": {
+    "frame": "frame.jpg",
+    "main": "极光季 · 冰岛 × 挪威",
+    "sub": "12 日 9 晚 ｜ 54,900 元/人起",
+    "out": "cover.jpg",
+    "x": 60,
+    "main_size": 66,
+    "sub_size": 26,
+    "main_y": 1540,
+    "sub_y": 1640
+  }
+}
