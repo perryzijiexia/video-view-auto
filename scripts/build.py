@@ -69,9 +69,15 @@ def normalize(spec, shot, idx, workdir):
         dur = max(0.5, avail - ss)
 
     W, H, FPS = spec["width"], spec["height"], spec["fps"]
+    # crop.x / crop.y pick which part of the frame survives the reframing:
+    # 0 = left/top edge, 1 = right/bottom edge. Default keeps the centre.
+    cx = float(shot.get("crop", {}).get("x", 0.5))
+    cy = float(shot.get("crop", {}).get("y", 0.5))
     vf = shot.get("pregrade", "") + (
-        "scale=%d:%d:force_original_aspect_ratio=increase,crop=%d:%d,"
-        "fps=%d,%s,format=yuv420p" % (W, H, W, H, FPS, spec.get("grade", ""))
+        "scale=%d:%d:force_original_aspect_ratio=increase,"
+        "crop=%d:%d:(in_w-out_w)*%s:(in_h-out_h)*%s,"
+        "fps=%d,%s,format=yuv420p"
+        % (W, H, W, H, cx, cy, FPS, spec.get("grade", ""))
     )
     out = os.path.join(workdir, spec["workdir"], "%02d.mp4" % idx)
     run([FF, "-y", "-v", "error", "-ss", str(ss), "-t", str(dur), "-i", src,
