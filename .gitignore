@@ -1,0 +1,10 @@
+work/
+out/
+raw/
+_clips/
+cards/
+*.mp4
+*.webm
+*.mp3
+*.wav
+.DS_Store
