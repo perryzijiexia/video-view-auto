@@ -1,0 +1,142 @@
+{
+ "output": "reel-vertical.mp4",
+ "width": 1080,
+ "height": 1920,
+ "fps": 25,
+ "xfade": 0.6,
+ "music": "music/bed.mp3",
+ "music_in": 0,
+ "music_gain": 0.9,
+ "title": {
+  "png": "cards/title.png",
+  "in": 1.2,
+  "out": 5.6
+ },
+ "endcard": {
+  "png": "cards/endcard.png",
+  "dur": 3.6
+ },
+ "shots": [
+  {
+   "src": "raw/5700949.mp4",
+   "in": 0.5,
+   "dur": 6.8,
+   "caption": null,
+   "crop": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  {
+   "src": "raw/4595479.mp4",
+   "in": 2.0,
+   "dur": 5.6,
+   "caption": "cards/cap_00.png",
+   "crop": {
+    "x": 0.38,
+    "y": 0.5
+   }
+  },
+  {
+   "src": "raw/29415894.mp4",
+   "in": 0.3,
+   "dur": 5.2,
+   "caption": "cards/cap_01.png",
+   "crop": {
+    "x": 0.34,
+    "y": 0.46
+   }
+  },
+  {
+   "src": "raw/32217855.mp4",
+   "in": 0.6,
+   "dur": 5.2,
+   "caption": "cards/cap_02.png",
+   "crop": {
+    "x": 0.55,
+    "y": 0.5
+   }
+  },
+  {
+   "src": "raw/34007622.mp4",
+   "in": 4.0,
+   "dur": 5.2,
+   "caption": "cards/cap_03.png",
+   "crop": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  {
+   "src": "raw/29477417.mp4",
+   "in": 2.0,
+   "dur": 5.6,
+   "caption": "cards/cap_04.png",
+   "crop": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  {
+   "src": "raw/11707765.mp4",
+   "in": 2.0,
+   "dur": 5.4,
+   "caption": "cards/cap_05.png",
+   "crop": {
+    "x": 0.5,
+    "y": 0.44
+   }
+  },
+  {
+   "src": "raw/fjellheisen.webm",
+   "in": 60.0,
+   "dur": 6.5,
+   "caption": "cards/cap_06.png",
+   "crop": {
+    "x": 0.45,
+    "y": 0.5
+   },
+   "pregrade": "eq=saturation=0.55:contrast=1.08:brightness=-0.03:gamma=1.04,"
+  },
+  {
+   "src": "raw/10383750.mp4",
+   "in": 1.0,
+   "dur": 5.4,
+   "caption": "cards/cap_07.png",
+   "crop": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  {
+   "src": "raw/10372292.mp4",
+   "in": 1.0,
+   "dur": 5.4,
+   "caption": "cards/cap_08.png",
+   "crop": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  },
+  {
+   "src": "raw/18660949.mp4",
+   "in": 0.5,
+   "dur": 4.8,
+   "caption": "cards/cap_09.png",
+   "crop": {
+    "x": 0.42,
+    "y": 0.5
+   }
+  },
+  {
+   "src": "raw/8352634.mp4",
+   "in": 1.0,
+   "dur": 4.8,
+   "caption": "cards/cap_10.png",
+   "crop": {
+    "x": 0.5,
+    "y": 0.5
+   }
+  }
+ ]
+}
