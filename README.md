@@ -41,7 +41,7 @@ cp scripts/pexels_meta.js work/pexels_meta.js       # 改 IDS
 ego-browser nodejs < work/pexels_meta.js
 
 # 3) 下载
-scripts/fetch_clip.sh 4595479 raw
+bash scripts/fetch_clip.sh 4595479 raw
 
 # 4) 字卡
 cp examples/cards.example.json work/cards.json
