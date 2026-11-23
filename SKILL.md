@@ -82,8 +82,8 @@ ego-browser nodejs < work/pexels_meta.js
 ## 阶段 3 · 下载
 
 ```bash
-scripts/fetch_clip.sh 4595479 raw            # Pexels id
-scripts/fetch_clip.sh https://upload.wikimedia.org/.../file.webm raw
+bash scripts/fetch_clip.sh 4595479 raw            # Pexels id
+bash scripts/fetch_clip.sh https://upload.wikimedia.org/.../file.webm raw
 ```
 
 4K 原片一条 20–150 MB，十几条就是 1 GB 量级，先估磁盘。
