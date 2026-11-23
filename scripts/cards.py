@@ -102,17 +102,34 @@ def main():
     if end:
         img = Image.new("RGBA", (W, H), (8, 12, 16, 255))
         d = ImageDraw.Draw(img)
-        m = 120
+        # layout overrides let one cards.json serve 16:9 and 9:16
+        L = end.get("layout", {})
+        m = L.get("frame_margin", 120)
         d.rectangle([m, m, W - m, H - m], outline=(58, 70, 80, 255), width=1)
-        tracked(d, (W / 2, 286), end["title"], make_font(F, 66, True), white, 3, "ma")
-        d.rectangle([W / 2 - 70, 400, W / 2 + 70, 403], fill=accent)
+        title_y = L.get("title_y", 286)
+        title_size = L.get("title_size", 66)
+        tracked(d, (W / 2, title_y), end["title"], make_font(F, title_size, True), white, 3, "ma")
+        rule_y = L.get("rule_y", title_y + title_size + 48)
+        rule_half = L.get("rule_half", 70)
+        d.rectangle([W / 2 - rule_half, rule_y, W / 2 + rule_half, rule_y + 3], fill=accent)
+        line_y0 = L.get("line_y0", rule_y + 52)
+        line_gap = L.get("line_gap", 56)
+        line_size = L.get("line_size", 32)
         for i, ln in enumerate(end.get("lines", [])):
-            tracked(d, (W / 2, 452 + i * 56), ln, make_font(F, 32, False), grey, 2, "ma")
-        tracked(d, (W / 2, 640), end.get("price", ""), make_font(F, 58, True), white, 2, "ma")
-        tracked(d, (W / 2, 730), end.get("meta", ""), make_font(F, 28, False),
+            tracked(d, (W / 2, line_y0 + i * line_gap), ln, make_font(F, line_size, False),
+                    grey, 2, "ma")
+        price_y = L.get("price_y", line_y0 + 140)
+        price_size = L.get("price_size", 58)
+        tracked(d, (W / 2, price_y), end.get("price", ""), make_font(F, price_size, True),
+                white, 2, "ma")
+        meta_y = L.get("meta_y", price_y + 90)
+        meta_size = L.get("meta_size", 28)
+        tracked(d, (W / 2, meta_y), end.get("meta", ""), make_font(F, meta_size, False),
                 (196, 204, 210, 255), 2, "ma")
         if end.get("footer"):
-            tracked(d, (W / 2, 856), end["footer"], make_font(F, 24, False),
+            footer_y = L.get("footer_y", meta_y + 126)
+            footer_size = L.get("footer_size", 24)
+            tracked(d, (W / 2, footer_y), end["footer"], make_font(F, footer_size, False),
                     (138, 148, 158, 255), 6, "ma")
         put("endcard.png", img.convert("RGB"))
 
@@ -126,9 +143,12 @@ def main():
                         fill=(0, 0, 0, int(150 * (i / 360) ** 1.2)))
         im = Image.alpha_composite(im.convert("RGBA"), ov)
         d = ImageDraw.Draw(im)
-        tracked(d, (100, 806), cover["main"], make_font(F, 74, True), white, 4)
-        tracked(d, (102, 906), cover.get("sub", ""), make_font(F, 30, False),
-                (226, 230, 234, 255), 2)
+        main_y = cover.get("main_y", H - 274)
+        sub_y = cover.get("sub_y", main_y + 100)
+        tracked(d, (cover.get("x", 100), main_y), cover["main"],
+                make_font(F, cover.get("main_size", 74), True), white, 4)
+        tracked(d, (cover.get("x", 100) + 2, sub_y), cover.get("sub", ""),
+                make_font(F, cover.get("sub_size", 30), False), (226, 230, 234, 255), 2)
         im.convert("RGB").save(os.path.join(outdir, cover.get("out", "cover.jpg")), quality=92)
 
     print("cards ->", outdir)
