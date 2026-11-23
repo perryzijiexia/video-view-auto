@@ -1,0 +1,35 @@
+{
+  "width": 1920,
+  "height": 1080,
+  "out_dir": "cards",
+  "title": {
+    "main": "极光季 · 冰岛 × 挪威",
+    "sub": "12 日 9 晚 · 9 晚极光带住宿",
+    "y": 402,
+    "main_size": 96,
+    "sub_size": 34,
+    "tracking": 6,
+    "rule_y": 610
+  },
+  "captions": [
+    { "cn": "雷克雅未克 · 哈尔格林姆教堂", "en": "HALLGRIMSKIRKJA · REYKJAVIK" },
+    { "cn": "杰古沙龙冰河湖", "en": "JOKULSARLON GLACIER LAGOON" },
+    { "cn": "FJELLHEISEN 缆车", "en": "CABLE CAR · TROMSO" }
+  ],
+  "endcard": {
+    "title": "极光季｜北挪威 + 冰岛 12 日 9 晚",
+    "lines": [
+      "9 晚极光带住宿  ·  罗弗敦连住 2 晚  ·  蓝冰洞与冰川徒步",
+      "蓝湖温泉  ·  冰岛极光游船  ·  帝王蟹品鉴  ·  索玛诺伊"
+    ],
+    "price": "54,900 元 / 人起",
+    "meta": "2027 极光季 ｜ 1/28 ￥56,800  ｜  2/18 · 3/4 ￥54,900",
+    "footer": "ICELAND  ×  NORWAY  ·  2027"
+  },
+  "cover": {
+    "frame": "work/frame.jpg",
+    "main": "极光季 · 冰岛 × 挪威",
+    "sub": "12 日 9 晚 ｜ 9 晚极光带住宿 ｜ 54,900 元/人起",
+    "out": "cover.jpg"
+  }
+}
