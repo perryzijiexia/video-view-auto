@@ -92,10 +92,12 @@ def main():
         img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
         d = ImageDraw.Draw(img)
         x, y = spec.get("caption_xy", [100, 828])
-        d.rectangle([x, y + 4, x + 5, y + 104], fill=accent)
-        tracked(d, (x + 26, y), cap["cn"], make_font(F, spec.get("cap_size", 46), True), white, 2)
-        tracked(d, (x + 28, y + 66), cap.get("en", ""),
-                make_font(F, spec.get("cap_en_size", 22), False), (214, 220, 226, 230), 4)
+        cap_size = spec.get("cap_size", 46)
+        cap_en = spec.get("cap_en_size", 22)
+        d.rectangle([x, y + 4, x + 5, y + int(cap_size * 2.15)], fill=accent)
+        tracked(d, (x + 26, y), cap["cn"], make_font(F, cap_size, True), white, 2)
+        tracked(d, (x + 28, y + int(cap_size * 1.45)), cap.get("en", ""),
+                make_font(F, cap_en, False), (214, 220, 226, 230), 4)
         put("cap_%02d.png" % i, shadow(img, 6, 140))
 
     end = spec.get("endcard")
