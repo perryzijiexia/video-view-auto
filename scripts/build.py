@@ -197,7 +197,7 @@ def main():
 
     if has_music:
         fg.append("[%d:a]atrim=0:%.2f,asetpts=PTS-STARTPTS,afade=t=in:st=0:d=%s,"
-                  "afade=t=out:st=%.2f:d=%s,volume=%s[aout]"
+                  "afade=t=out:st=%.2f:d=%s,volume=%s,alimiter=limit=0.95[aout]"
                   % (n, total, spec.get("fade_audio_in", 1.2), total - spec.get("fade_audio_out", 1.8),
                      spec.get("fade_audio_out", 1.8), spec.get("music_gain", 0.9)))
 
