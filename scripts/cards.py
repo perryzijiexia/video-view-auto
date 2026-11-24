@@ -131,6 +131,10 @@ def main():
             footer_size = L.get("footer_size", 24)
             tracked(d, (W / 2, footer_y), end["footer"], make_font(F, footer_size, False),
                     (138, 148, 158, 255), 6, "ma")
+        if end.get("credit"):
+            credit_y = L.get("credit_y", (L.get("footer_y", meta_y + 126)) + 70)
+            tracked(d, (W / 2, credit_y), end["credit"], make_font(F, L.get("credit_size", 16), False),
+                    (108, 116, 124, 255), 1, "ma")
         put("endcard.png", img.convert("RGB"))
 
     cover = spec.get("cover")
