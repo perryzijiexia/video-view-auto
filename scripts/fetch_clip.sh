@@ -28,7 +28,7 @@ FF="$(find_ffmpeg)"
 
 probe() {
   [[ -n "$FF" ]] || { echo "  (ffmpeg not found, skipping probe)"; return; }
-  "$FF" -hide_banner -i "$1" 2>&1 | grep -E "Duration|Stream #0:0" | sed 's/^/  /'
+  "$FF" -hide_banner -i "$1" 2>&1 | grep -E "Duration|Stream #0:0" | sed 's/^/  /' || true
 }
 
 case "$TARGET" in
